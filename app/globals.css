@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -41,6 +41,44 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Custom Spacing */
+  --spacing-1s: 2px;
+  --spacing-2s: 4px;
+  --spacing-3s: 8px;
+  --spacing-4s: 12px;
+  --spacing-5s: 16px;
+  --spacing-6s: 24px;
+  --spacing-7s: 32px;
+  --spacing-8s: 40px;
+  --spacing-9s: 48px;
+  --spacing-10s: 64px;
+
+  /* Custom Radius */
+  --radius-1r: 2px;
+  --radius-2r: 4px;
+  --radius-3r: 8px;
+  --radius-4r: 16px;
+
+  /* Typography */
+  --text-sm: 14px;
+  --text-sm--line-height: 19.6px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 27px;
+  --text-6xl: 20px;
+  --text-6xl--line-height: 30px;
+  --text-5xl: 24px;
+  --text-5xl--line-height: 33.6px;
+  --text-4xl: 30px;
+  --text-4xl--line-height: 42px;
+  --text-3xl: 36px;
+  --text-3xl--line-height: 46.8px;
+  --text-2xl: 48px;
+  --text-2xl--line-height: 57.6px;
+  --text-xl: 60px;
+  --text-xl--line-height: 66px;
 }
 
 :root {
