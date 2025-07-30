@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
+import 'remixicon/fonts/remixicon.css';
 
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 
-import { Header } from '@/components/header';
 import './globals.css';
 
 const firaCode = Fira_Code({
@@ -27,9 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="h-full">
       <head />
-      <body className={`${firaCode.className} antialiased`}>
+      <body
+        className={`${firaCode.className} antialiased flex flex-col min-h-dvh`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -37,7 +41,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <main className="flex-1">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
