@@ -5,12 +5,12 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
         primary: 'bg-primary text-primary-foreground',
-        link: 'bg-transparent text-foreground border border-border relative hover:text-primary-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100',
+        link: 'bg-transparent text-foreground border-2 border-border relative hover:text-primary-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100',
       },
       size: {
         primary: 'h-9 px-4 py-2 has-[>svg]:px-3',

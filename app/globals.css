@@ -6,7 +6,6 @@
 @theme {
   --font-display: 'Fira Code', 'sans-serif';
 
-  /* Custom colors */
   --color-*: initial;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -14,6 +13,28 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
+
+  --text-*: initial;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+
+  --leading-*: initial;
+  --leading-sm: 19.6px;
+  --leading-base: 24px;
+  --leading-lg: 27px;
+  --leading-xl: 30px;
+  --leading-2xl: 33.6px;
+  --leading-3xl: 42px;
+  --leading-4xl: 46.8px;
+  --leading-5xl: 57.6px;
+  --leading-6xl: 66px;
 }
 
 :root {
@@ -38,45 +59,90 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 
   h1 {
-    @apply text-6xl leading-[66px];
+    font-size: var(--text-6xl);
+    line-height: var(--leading-6xl);
   }
 
   h2 {
-    @apply text-5xl leading-[57.6px];
+    font-size: var(--text-5xl);
+    line-height: var(--leading-5xl);
   }
 
   h3 {
-    @apply text-4xl leading-[46.8px];
+    font-size: var(--text-4xl);
+    line-height: var(--leading-4xl);
   }
 
   h4 {
-    @apply text-3xl leading-[42px];
+    font-size: var(--text-3xl);
+    line-height: var(--leading-3xl);
   }
 
   h5 {
-    @apply text-2xl leading-[33.6px];
+    font-size: var(--text-2xl);
+    line-height: var(--leading-2xl);
   }
 
   h6 {
-    @apply text-xl leading-[30px];
+    font-size: var(--text-xl);
+    line-height: var(--leading-xl);
   }
 
   p {
-    @apply text-base leading-[24px];
+    font-size: var(--text-base);
+    line-height: var(--leading-base);
   }
 }
 
 @layer utilities {
-  .p-small {
-    @apply text-sm leading-[19.6px];
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--leading-6xl);
   }
 
-  .p-large {
-    @apply text-lg leading-[27px];
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--leading-5xl);
+  }
+
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--leading-4xl);
+  }
+
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--leading-3xl);
+  }
+
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-2xl);
+  }
+
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--leading-xl);
+  }
+
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--leading-lg);
+  }
+
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--leading-base);
+  }
+
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--leading-sm);
   }
 }
