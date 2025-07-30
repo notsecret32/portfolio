@@ -10,14 +10,14 @@ const links = [
 
 export const Footer = () => {
   return (
-    <div className="w-full h-14 border-t-2 flex justify-start items-center">
-      <div className="flex items-center justify-center px-6 border-r-2 h-full">
+    <div className="w-full h-14 border-t-1 flex justify-start items-center">
+      <div className="flex items-center justify-center px-6 border-r-1 h-full">
         <p>find me in:</p>
       </div>
       {links.map(({ icon, href }) => (
         <Link
           key={href}
-          className="px-4 border-r-2"
+          className="px-4 border-r-1"
           href={href}
           target="_blank"
         >
@@ -25,7 +25,7 @@ export const Footer = () => {
         </Link>
       ))}
       <Link
-        className="flex justify-center items-center px-8 ml-auto border-l-2 h-full gap-2"
+        className="flex justify-center items-center px-8 ml-auto border-l-1 h-full gap-2"
         href="https://github.com/notsecret32"
         target="_blank"
       >

@@ -34,7 +34,7 @@ export const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center justify-start border-b-2 border-border gap-32">
+    <div className="flex items-center justify-start border-b-1 border-border gap-32">
       <p className="px-4">alexander-skvorchevsky</p>
       <div className="flex grow h-14">
         {routes.map(({ title, href, className }) => (
