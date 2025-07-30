@@ -3,6 +3,7 @@ import { Fira_Code } from 'next/font/google';
 
 import { ThemeProvider } from '@/components/theme-provider';
 
+import { Header } from '@/components/header';
 import './globals.css';
 
 const firaCode = Fira_Code({
@@ -35,6 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>

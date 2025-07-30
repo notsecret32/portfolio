@@ -1,9 +1,6 @@
-import { Header } from '@/components/header';
-
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
-      <Header />
       <div className="flex flex-row gap-16">
         <div>
           <h1>H1</h1>
