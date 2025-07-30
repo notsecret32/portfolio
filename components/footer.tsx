@@ -3,8 +3,12 @@ import Link from 'next/link';
 
 const links = [
   {
-    icon: 'ri-linkedin-fill',
+    icon: 'ri-linkedin-box-fill',
     href: 'https://www.linkedin.com/in/alexander-skvorchevskiy',
+  },
+  {
+    icon: 'ri-telegram-2-fill',
+    href: 'https://t.me/notsecret32',
   },
 ];
 
