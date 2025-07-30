@@ -43,6 +43,8 @@ export const Header = () => {
             className={cn(className, {
               ['text-primary-foreground after:scale-x-100']: pathname === href,
             })}
+            variant="link"
+            size="link"
             asChild
           >
             <Link href={href}>{title}</Link>

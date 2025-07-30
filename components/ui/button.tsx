@@ -9,19 +9,20 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'bg-transparent text-foreground border border-border relative hover:text-primary-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100',
+        primary: 'bg-primary text-primary-foreground',
+        link: 'bg-transparent text-foreground border border-border relative hover:text-primary-foreground after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-primary after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100',
       },
       size: {
-        default: 'h-full px-4 py-2 has-[>svg]:px-3',
+        primary: 'h-9 px-4 py-2 has-[>svg]:px-3',
+        link: 'h-full px-8',
         sm: 'h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5',
         lg: 'h-10 rounded-md px-6 has-[>svg]:px-4',
         icon: 'size-9',
       },
     },
     defaultVariants: {
-      variant: 'default',
-      size: 'default',
+      variant: 'primary',
+      size: 'primary',
     },
   }
 );
