@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 
+import { ThemeProvider } from '@/components/theme-provider';
+
 import './globals.css';
 
 const firaCode = Fira_Code({
@@ -24,8 +26,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${firaCode.className} antialiased`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className={`${firaCode.className} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
