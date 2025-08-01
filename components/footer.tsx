@@ -30,10 +30,10 @@ export const Footer = () => {
       ))}
       <Link
         className="flex justify-center items-center px-8 ml-auto border-l-1 h-full gap-2"
-        href="https://github.com/notsecret32"
+        href="https://github.com/notsecret32/portfolio"
         target="_blank"
       >
-        <p>@notsecret32</p>
+        <p>source code</p>
         <i className="ri-github-fill ri-xl"></i>
       </Link>
     </div>

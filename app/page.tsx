@@ -1,30 +1,30 @@
+import Image from 'next/image';
+
+import { HeroSection } from '@/components/home/hero-section';
+import { SnakeGame } from '@/components/home/snake-game';
+
 export default function HomePage() {
   return (
-    <div>
-      <div className="flex flex-row gap-16">
-        <div>
-          <h1>H1</h1>
-          <h2>H2</h2>
-          <h3>H3</h3>
-          <h4>H4</h4>
-          <h5>H5</h5>
-          <h6>H6</h6>
-          <p className="text-lg">p - large</p>
-          <p>p - medium</p>
-          <p className="text-sm">p - small</p>
-        </div>
-        <div>
-          <div className="text-6xl">H1</div>
-          <div className="text-5xl">H2</div>
-          <div className="text-4xl">H3</div>
-          <div className="text-3xl">H4</div>
-          <div className="text-2xl">H5</div>
-          <div className="text-xl">H6</div>
-          <div className="text-lg">p - large</div>
-          <div className="text-base">p - medium</div>
-          <div className="text-sm">p - small</div>
-        </div>
+    <div className="relative flex flex-1 items-center justify-center overflow-hidden">
+      <div className="w-full max-w-[1280px] mx-auto flex justify-center items-center gap-[146px]">
+        <HeroSection />
+        <SnakeGame />
       </div>
+
+      <Image
+        className="absolute right-0 !top-[15%] !translate-x-[20%] -z-10 pointer-events-none select-none -rotate-[20deg]"
+        src="/images/blue-blur.png"
+        alt="Blue Blur"
+        fill
+        priority
+      />
+      <Image
+        className="absolute right-0 !top-0 !translate-x-[15%] -z-10 pointer-events-none select-none rotate-[220deg]"
+        src="/images/green-blur.png"
+        alt="Green Blur"
+        fill
+        priority
+      />
     </div>
   );
 }
