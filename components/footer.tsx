@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { Button } from './ui/button';
 
 const links = [
   {
@@ -19,23 +20,27 @@ export const Footer = () => {
         <p>find me in:</p>
       </div>
       {links.map(({ icon, href }) => (
-        <Link
+        <Button
           key={href}
-          className="px-4 border-r-1"
-          href={href}
-          target="_blank"
+          className="px-4 border-0 border-r-1 h-full"
+          variant="link"
+          asChild
         >
-          <i className={cn(icon, 'ri-2x')} />
-        </Link>
+          <Link href={href} target="_blank">
+            <i className={cn(icon, 'ri-2x')} />
+          </Link>
+        </Button>
       ))}
-      <Link
-        className="flex justify-center items-center px-8 ml-auto border-l-1 h-full gap-2"
-        href="https://github.com/notsecret32/portfolio"
-        target="_blank"
+      <Button
+        className="flex justify-center items-center px-8 ml-auto border-0 border-l-1 h-full gap-2"
+        variant="link"
+        asChild
       >
-        <p>source code</p>
-        <i className="ri-github-fill ri-xl"></i>
-      </Link>
+        <Link href="https://github.com/notsecret32/portfolio" target="_blank">
+          <p>source code</p>
+          <i className="ri-github-fill ri-xl"></i>
+        </Link>
+      </Button>
     </div>
   );
 };
